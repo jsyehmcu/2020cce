@@ -1,18 +1,15 @@
 #include <stdio.h>
-struct DATA { ///宣告
-    float x, y, z;///定義裡面有...
-}  point1 ;
-struct DATA points[5];
-///point1 是變數, 長得像DATA
-///DATA裡面有 x,y,z
+
+struct POINT {
+    float x, y;
+};
+
 int main()
 {
-    ///int b;
-    ///int a[5];
-    for(int i=0; i<5; i++){
-        points[i].x = i*10;
-        points[i].y = 20;
-        points[i].z = 0;
-        printf("%f %f %f\n", points[i].x, points[i].y, points[i].z);
-    }
+    struct POINT a = { 4.1, 3.2 };
+    printf("%f %f\n", a.x, a.y );
+
+    a.x = 1;
+    a.y = 2;
+    printf("%f %f\n", a.x, a.y );
 }
